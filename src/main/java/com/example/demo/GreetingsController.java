@@ -14,6 +14,5 @@ public class GreetingsController {
         	
     	return new Greetings(mood);
     }
-
 	
 }
