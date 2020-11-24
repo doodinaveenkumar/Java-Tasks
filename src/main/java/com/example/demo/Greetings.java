@@ -1,11 +1,11 @@
-package com.example.restapp;
+package com.example.demo;
 
 
-public class Greeting {
+public class Greetings {
 
 private String name;
 
-public Greeting(int id) {  
+public Greetings(int id) {  
     	
     	switch (id) {
     	case 1:

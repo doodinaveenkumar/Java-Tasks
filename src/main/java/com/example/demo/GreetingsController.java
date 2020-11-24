@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingsController {
 
     @GetMapping("/greetingMood")
-   public Greeting Greetings(@RequestParam int mood) {  
+   public Greetings Greetings(@RequestParam int mood) {  
     	
         	
     	return new Greetings(mood);
     }
-
 	
 }
