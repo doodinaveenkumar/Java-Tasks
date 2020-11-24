@@ -12,7 +12,7 @@ public class GreetingsController {
    public Greetings Greetings(@RequestParam int mood) {  
     	
         	
-    	return new Greeting(mood);
+    	return new Greetings(mood);
     }
 
 	
