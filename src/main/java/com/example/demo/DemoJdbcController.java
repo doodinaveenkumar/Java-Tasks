@@ -2,9 +2,10 @@ package com.example.demo;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
 
 @RestController
 public class DemoJdbcController {
@@ -12,9 +13,9 @@ public class DemoJdbcController {
     @Autowired
     private DemoJdbcService demoJdbcService;
 
-    @GetMapping("/testJdbc")
-    public int testJdbc() {
-        return demoJdbcService.testJdbc();
+    @PostMapping("/savecountries")
+    public void saveCountries(@RequestBody List<Country> countries) {
+        demoJdbcService.saveCountries(countries);
     }
 
 
