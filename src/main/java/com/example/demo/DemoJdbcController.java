@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GreetingsController {
+public class DemoJdbcController {
 
     @Autowired
-    private GreetingService greetingService;
+    private DemoJdbcService demoJdbcService;
 
-    @GetMapping("/greetingMood")
-    public Greeting Greetings(@RequestParam int mood) {
-        Greeting greeting = new Greeting();
-        greeting.setName(greetingService.computeMoodName(mood));
-    	return greeting;
+    @GetMapping("/testJdbc")
+    public int testJdbc() {
+        return demoJdbcService.testJdbc();
     }
+
+
 }
