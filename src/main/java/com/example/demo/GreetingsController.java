@@ -18,5 +18,4 @@ public class GreetingsController {
         greeting.setName(greetingService.computeMoodName(mood));
     	return greeting;
     }
-	
 }
